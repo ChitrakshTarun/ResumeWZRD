@@ -73,45 +73,121 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
-.features-card {
+.column-cards {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	margin: 0 1.2rem;
 }
 
-.features-card span {
+.column-cards span {
 	font-size: 24px; /* Adjust this value to change the size of the icon */
 }
-.features-card span.material-icons,
-.features-card span.material-symbols-outlined {
+.column-cards span.material-icons,
+.column-cards span.material-symbols-outlined {
 	font-size: 3rem; /* Adjust this value to change the size of the icon */
 	color: #e52e2e;
 }
-.features-card ul {
+.column-cards ul {
 	display: flex;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	flex: 1; /* This will make each card take up an equal amount of space */
 }
-.features-card h6 {
+.column-cards h6 {
 	font-size: 1.5rem;
 	color: #e52e2e;
 }
-.features-card span {
+.column-cards span {
 	width: 100%;
 	justify-content: center;
 	align-items: center;
 }
-.features-card li span,
-.features-card li h6,
-.features-card li p {
+.column-cards li span,
+.column-cards li h6,
+.column-cards li p {
 	margin-top: 0;
 	margin-bottom: 1.5rem; /* Adjust this value to change the vertical spacing */
 }
-/* Button Styles */
+
+.resume-card .resume-template {
+	margin: 0 4rem; /* Adjust this value to change the space between the divs */
+}
+.resume-template {
+	position: relative;
+	width: 22em;
+	height: 30em;
+
+	background: url(src/images/resume-template.png) no-repeat;
+	background-size: 22em 30em;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	margin: auto;
+	overflow: hidden;
+}
+
+.resume-template {
+	position: relative;
+	width: 22em;
+	height: 30em;
+
+	background: url(src/images/resume-template.png) no-repeat;
+	background-size: 22em 30em;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	margin: auto;
+	overflow: hidden;
+}
+.resume-template * {
+	position: relative;
+	z-index: 2;
+}
+.resume-template:hover .color-overlay {
+	background: rgba(74, 100, 114, 0.8);
+}
+.resume-template:hover .info {
+	bottom: -3em;
+	opacity: 1;
+}
+.resume-template,
+.color-overlay {
+	border-radius: 0.7em;
+}
+.color-overlay {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transition: 0.7s background;
+	background: rgba(74, 100, 114, 0.3);
+	z-index: 1;
+}
+
+.title-box {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 2em;
+}
+.title-box hr {
+	margin-top: -0.4em;
+	margin-bottom: 1em;
+	width: 5em;
+	height: 0.25em;
+	box-sizing: content-box;
+	border: none;
+	background: #d0bc57;
+}
+h3 {
+	display: inline-block;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-size: 1.4em;
+	color: #d0bc57;
+	text-align: center;
+}
 
 .generate-button {
 	align-items: center;

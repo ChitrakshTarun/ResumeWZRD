@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #3590f3;
+	background-color: #d43737;
 }
 
 .header p {
@@ -32,7 +32,7 @@
 	background-size: cover;
 	background-position: center;
 	width: 100%;
-	height: 75vh; /* Adjust this value based on your needs */
+	height: 75vh;
 }
 .home-background h1 {
 	font-size: 4rem;
@@ -50,11 +50,11 @@
 	bottom: 0;
 	left: 0;
 	background-color: #001c55;
-	opacity: 0.75; /* Adjust this value to change the intensity of the color overlay */
+	opacity: 0.75;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%; /* Adjust this value based on your needs */
+	height: 100%;
 }
 .home-content {
 	position: relative;
@@ -62,7 +62,7 @@
 	color: white;
 	text-align: center;
 	padding: 0 300px;
-	height: 60%; /* Adjust this value based on your needs */
+	height: 60%;
 }
 .container {
 	text-align: center;
@@ -73,6 +73,44 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
+.features-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 1.2rem;
+}
+
+.features-card span {
+	font-size: 24px; /* Adjust this value to change the size of the icon */
+}
+.features-card span.material-icons,
+.features-card span.material-symbols-outlined {
+	font-size: 3rem; /* Adjust this value to change the size of the icon */
+	color: #e52e2e;
+}
+.features-card ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+.features-card h6 {
+	font-size: 1.5rem;
+	color: #e52e2e;
+}
+.features-card span {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.features-card li span,
+.features-card li h6,
+.features-card li p {
+	margin-top: 0;
+	margin-bottom: 1.5rem; /* Adjust this value to change the vertical spacing */
+}
 /* Button Styles */
 
 .generate-button {

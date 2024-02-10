@@ -64,67 +64,67 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
 	doc.line(10, 47.5, 200, 47.5);
-	doc.text(skillset, 10, 52.5);
+	doc.text(skillset, 10, 55);
 
 	// Experience
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	centerText("EXPERIENCE", 62.5);
-	doc.line(10, 65, 200, 65);
+	centerText("EXPERIENCE", 65);
+	doc.line(10, 67.5, 200, 67.5);
 	doc.setFontSize(17); // Increased font size for company and title
-	doc.text(company, 10, 70);
+	doc.text(company, 10, 75);
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title, 10, 75);
-	doc.text("Location: " + workLocation, 10, 80);
-	doc.text("Employment Duration: " + joining + " to " + resigning, 10, 85);
+	doc.text("Role: " + title, 10, 80);
+	doc.text("Location: " + workLocation, 10, 85);
+	doc.text("Employment Duration: " + joining + " to " + resigning, 10, 90);
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text(company2, 10, 95); // Adjusted y-offset
+	doc.text(company2, 10, 100); // Adjusted y-offset
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title2, 10, 100); // Adjusted y-offset
-	doc.text("Location: " + workLocation2, 10, 105); // Adjusted y-offset
-	doc.text("Employment Duration: " + joining2 + " to " + resigning2, 10, 110); // Adjusted y-offset
+	doc.text("Role: " + title2, 10, 105); // Adjusted y-offset
+	doc.text("Location: " + workLocation2, 10, 110); // Adjusted y-offset
+	doc.text("Employment Duration: " + joining2 + " to " + resigning2, 10, 115); // Adjusted y-offset
 
 	// Education
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
-	centerText("EDUCATION", 120); // Adjusted y-offset
-	doc.line(10, 122.5, 200, 122.5); // Adjusted y-offset
+	centerText("EDUCATION", 125); // Adjusted y-offset
+	doc.line(10, 127.5, 200, 127.5); // Adjusted y-offset
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text("School: " + school, 10, 127.5); // Adjusted y-offset
+	doc.text("School: " + school, 10, 135); // Adjusted y-offset
 	doc.setTextColor(90, 90, 90);
 	doc.setFontSize(12); // Increased font size for school, stream, university, degree
 	doc.setFont("arial", "normal");
-	doc.text("Stream: " + stream, 10, 132.5); // Adjusted y-offset
-	doc.text("10th: " + percentage10 + "%", 10, 137.5); // Adjusted y-offset
-	doc.text("12th: " + percentage12 + "%", 10, 142.5); // Adjusted y-offset
+	doc.text("Stream: " + stream, 10, 140); // Adjusted y-offset
+	doc.text("10th: " + percentage10 + "%", 10, 145); // Adjusted y-offset
+	doc.text("12th: " + percentage12 + "%", 10, 150); // Adjusted y-offset
 	doc.setTextColor(0, 0, 0);
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text("University: " + university, 10, 152.5); // Adjusted y-offset
+	doc.text("University: " + university, 10, 160); // Adjusted y-offset
 	doc.setFontSize(12); // Increased font size for school, stream, university, degree
 	doc.setTextColor(90, 90, 90);
 	doc.setFont("arial", "normal");
-	doc.text(degree, 10, 157.5); // Adjusted y-offset
+	doc.text(degree, 10, 165); // Adjusted y-offset
 	doc.setFontSize(12); // Decreased font size for cgpa
-	doc.text("CGPA (8 Semesters): " + cgpa, 10, 162.5); // Adjusted y-offset
-	doc.text("Graduated on: " + dog, 10, 167.5); // Adjusted y-offset
+	doc.text("CGPA (8 Semesters): " + cgpa, 10, 170); // Adjusted y-offset
+	doc.text("Graduated on: " + dog, 10, 175); // Adjusted y-offset
 
 	// Interests
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	centerText("INTERESTS", 177.5); // Adjusted y-offset
-	doc.line(10, 180, 200, 180); // Adjusted y-offset
+	centerText("INTERESTS", 185); // Adjusted y-offset
+	doc.line(10, 187.5, 200, 187.5); // Adjusted y-offset
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text(passion, 10, 185); // Adjusted y-offset
+	doc.text(passion, 10, 195); // Adjusted y-offset
 
 	// Save the PDF
 	doc.save("resume.pdf");

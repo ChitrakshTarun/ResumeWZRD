@@ -275,3 +275,18 @@ h3 {
 	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
 	transform: translateY(0);
 }
+
+.form-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.75rem;
+	color: #e52e2e;
+}
+.form-header button {
+	margin-left: 10px;
+	position: absolute;
+	left: 0;
+	align-items: end;
+	justify-self: start;
+}

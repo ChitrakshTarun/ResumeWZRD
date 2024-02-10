@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Build your Resume</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+		/>
+	</head>
+	<body>
+		<section class="form-header">
+			<button
+				class="generate-button"
+				role="button"
+				onclick="history.back()"
+			>
+				<span class="material-symbols-outlined">arrow_back</span>
+			</button>
+			<header id="form-header">
+				<h1>Build your Resume!</h1>
+			</header>
+		</section>
+		<section>
+			<form id="myForm">
+				<label for="name">Name:</label><br />
+				<input
+					type="text"
+					id="name"
+					name="name"
+				/><br />
+				<label for="email">Email:</label><br />
+				<input
+					type="text"
+					id="email"
+					name="email"
+				/><br />
+				<input
+					type="submit"
+					value="Submit"
+				/>
+			</form>
+		</section>
+		<script src="script.js"></script>
+	</body>
+</html>

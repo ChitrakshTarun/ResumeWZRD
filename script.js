@@ -193,14 +193,9 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.text(location, 110, 25);
 	doc.text(linkedin, 110, 30);
 
-	// Define column widths and positions
-	let leftColumnY = 50; // Initial y-coordinate for left column
-	let rightColumnY = 50; // Initial y-coordinate for right column
-
 	// Left column: Skills and Education
 
 	// Education
-	leftColumnY += 45; // Adjust y-coordinate for education
 	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
@@ -274,4 +269,123 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 
 	// Save the PDF
 	doc.save("resume2.pdf");
+});
+
+/* Third Template */
+document.getElementById("resume-form").addEventListener("submit", function (e) {
+	e.preventDefault();
+
+	var name = document.getElementById("name").value;
+	var role = document.getElementById("role").value;
+	var phone = document.getElementById("phone").value;
+	var email = document.getElementById("email").value;
+	var linkedin = document.getElementById("linkedin").value;
+	var location = document.getElementById("location").value;
+	var skillset = document.getElementById("skillset").value;
+	var company = document.getElementById("company").value;
+	var workLocation = document.getElementById("work-location").value;
+	var title = document.getElementById("title").value;
+	var joining = document.getElementById("joining").value;
+	var resigning = document.getElementById("resigning").value;
+	var company2 = document.getElementById("company-2").value;
+	var workLocation2 = document.getElementById("work-location-2").value;
+	var title2 = document.getElementById("title-2").value;
+	var joining2 = document.getElementById("joining-2").value;
+	var resigning2 = document.getElementById("resigning-2").value;
+	var school = document.getElementById("school").value;
+	var stream = document.getElementById("stream").value;
+	var percentage10 = document.getElementById("percentage10").value;
+	var percentage12 = document.getElementById("percentage12").value;
+	var university = document.getElementById("university").value;
+	var degree = document.getElementById("degree").value;
+	var cgpa = document.getElementById("cgpa").value;
+	var dog = document.getElementById("dog").value;
+	var passion = document.getElementById("passion").value;
+	var doc = new jsPDF();
+	doc.setFillColor(173, 216, 230); // RGB for light blue
+
+	doc.rect(
+		0,
+		0,
+		doc.internal.pageSize.getWidth() / 3,
+		doc.internal.pageSize.getHeight(),
+		"F"
+	);
+	doc.setFontSize(20); // Increased font size for name
+	doc.setFont("arial", "bold");
+	doc.text(name, 5, 20);
+	doc.setFontSize(16); // Increased font size for role
+	doc.setFont("arial", "normal");
+	doc.text(role, 5, 30);
+	doc.setTextColor(90, 90, 90);
+	doc.setFontSize(12);
+	doc.text(phone, 5, 37.5);
+	doc.text(email, 5, 42.5);
+	doc.text(location, 5, 47.5);
+	doc.text(linkedin, 5, 52.5);
+	// Education
+	doc.setFontSize(20);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.text("EDUCATION", 5, 62.5);
+	doc.setFontSize(16);
+	doc.text(school, 5, 72.5 + 7.5);
+	doc.setFontSize(12);
+	doc.setTextColor(90, 90, 90);
+	doc.setFont("arial", "normal");
+	doc.text(stream, 5, 77.5 + 7.5);
+	doc.text("10th: " + percentage10 + "%", 5, 82.5 + 7.5);
+	doc.text("12th: " + percentage12 + "%", 5, 87.5 + 7.5);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.setFontSize(16);
+	doc.text(university, 5, 120);
+	doc.setFontSize(12);
+	doc.setTextColor(90, 90, 90);
+	doc.setFont("arial", "normal");
+	doc.text(degree, 5, 127.5);
+	doc.text(cgpa + "CGPA", 5, 135);
+	doc.text("Graduated" + dog, 5, 142.5);
+	doc.setFontSize(20);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.text("SKILLS", 5, 160.5);
+	doc.setFontSize(16);
+	doc.setFont("arial", "normal");
+	doc.setTextColor(90, 90, 90);
+	const skillsetTextLines = doc.splitTextToSize(skillset, 40); // Adjusted to match the width of the column
+	doc.text(skillsetTextLines, 5, 167.5);
+
+	// Right
+	doc.setFontSize(20);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.text("EXPERIENCE", 75, 62.5);
+	doc.setFontSize(16);
+	doc.text(company, 75, 80);
+	doc.setFontSize(12);
+	doc.setFont("arial", "normal");
+	doc.setTextColor(90, 90, 90);
+	doc.text(title, 75, 87.5);
+	doc.text(workLocation, 75, 95);
+	doc.text("Duration: " + joining + " to " + resigning, 75, 102.5);
+	doc.setFontSize(16);
+	doc.setFont("arial", "bold");
+	doc.text(company, 75, 120);
+	doc.setFontSize(12);
+	doc.setFont("arial", "normal");
+	doc.setTextColor(90, 90, 90);
+	doc.text(title, 75, 127.5);
+	doc.text(workLocation, 75, 135);
+	doc.text("Duration: " + joining + " to " + resigning, 75, 142.5);
+	doc.setFontSize(20);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.text("INTERESTS", 75, 160.5);
+	doc.setFontSize(16);
+	doc.setFont("arial", "normal");
+	doc.setTextColor(90, 90, 90);
+	const passionTextLines = doc.splitTextToSize(passion, 40); // Adjusted to match the width of the column
+	doc.text(passionTextLines, 75, 167.5);
+	doc.save("resume3.pdf");
 });

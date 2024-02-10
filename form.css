@@ -252,3 +252,7 @@ fieldset:last-child {
 section {
 	margin-bottom: 20px;
 }
+#my-form {
+	display: flex;
+	flex-direction: column;
+}

@@ -34,7 +34,7 @@
 			</header>
 		</section>
 		<section>
-			<form>
+			<form id="resume-form">
 				<fieldset id="personal-information">
 					<legend><h2>Personal Information</h2></legend>
 					<div class="column">
@@ -75,10 +75,10 @@
 				<fieldset id="skills">
 					<legend><h2>Skills</h2></legend>
 					<div class="column">
-						<label for="skills">E.g: HTML, CSS, JS, React...</label>
+						<label for="skillset">Skills</label>
 						<input
 							type="text"
-							id="skills"
+							id="skillset"
 						/>
 					</div>
 				</fieldset>
@@ -90,10 +90,10 @@
 							type="text"
 							id="company"
 						/>
-						<label for="location">Company Location</label>
+						<label for="work-location">Company Location</label>
 						<input
 							type="text"
-							id="location"
+							id="work-location"
 						/>
 						<label for="title">Designation</label>
 						<input
@@ -107,7 +107,7 @@
 							type="date"
 							id="joining"
 						/>
-						<label for="leaving">Resignation Date</label>
+						<label for="resigning">Resignation Date</label>
 						<input
 							type="date"
 							id="resigning"
@@ -123,28 +123,28 @@
 							name=""
 							id="school"
 						/>
-						<label for="school">Stream (Science, Commerce, etc...)</label>
+						<label for="stream">Stream (Science, Commerce, etc...)</label>
 						<input
 							type="text"
 							name=""
 							id="stream"
 						/>
-						<label for="percentage12">10th Marks</label>
+						<label for="percentage10">10th Marks</label>
 						<input
 							type="text"
-							id="percentage"
+							id="percentage10"
 						/>
 						<label for="percentage12">12th Marks</label>
 						<input
 							type="text"
-							id="percentage"
+							id="percentage12"
 						/>
 					</div>
 					<div class="column">
-						<label for="uni">University Name</label>
+						<label for="university">University Name</label>
 						<input
 							type="text"
-							id="uni"
+							id="university"
 						/>
 						<label for="degree">Degree (B.Tech CSE, B.Com Hons, etc...)</label>
 						<input
@@ -175,15 +175,14 @@
 						/>
 					</div>
 				</fieldset>
-			</form>
-			<div class="home-content">
 				<button
+					id="generate-button"
 					class="generate-button"
-					role="button"
+					type="submit"
 				>
-					Build Your Resume!
+					Generate PDF
 				</button>
-			</div>
+			</form>
 		</section>
 		<script src="script.js"></script>
 	</body>

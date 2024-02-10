@@ -17,7 +17,7 @@
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-		/>
+		/>					
 		<title>ResumeWZRD</title>
 	</head>
 	<body>
@@ -28,9 +28,9 @@
 					<p>ResumeWZRD</p>
 					<nav class="header-nav">
 						<ul>
-							<li><a href="#features">Features</a></li>
-							<li><a href="#templates">Templates</a></li>
-							<li><a href="#about-us">About Us</a></li>
+							<li><a class="navbar-item" href="#features">Features</a></li>
+							<li><a class="navbar-item" href="#templates">Templates</a></li>
+							<li><a class="navbar-item" href="#about-us">About Us</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -45,26 +45,18 @@
 						Stuck on picking the perfect resume template? With just one form,
 						generate three professionally crafted resumes tailored to your
 						needs!
-					</p>
-					<button
-						id="start-button"
-						class="generate-button"
-						role="button"
-						onclick="redirectToSite()"
-					>
-						Build Your Resume!
-					</button>
-					<script>
-						function redirectToSite() {
-							// Redirect to the loading page
-							window.location.href = "form.html";
+					</p>		
+					<a href="loading.html">	
+						<button
+							id="start-button"
+							class="generate-button"
+							role="button"
+							onclick="redirectToSite()"
+						>
+							Build Your Resume!
+						</button>
+					</a>		
 
-							// After 1.5 seconds, redirect to the intended site
-							setTimeout(function () {
-								window.location.href = "loading.html";
-							}, 1500);
-						}
-					</script>
 				</div>
 			</div>
 		</section>
@@ -76,14 +68,14 @@
 						<span class="material-icons">description</span>
 						<h6>Multiple Resume Templates</h6>
 						<p>
-							Fill a single resume form and download differently styled resumes. Choose from three templates to suit your needs
+							Fill a single resume form and download differently styled resumes. Choose from three templates to suit your needs.
 						</p>
 					</li>
 					<li>
 						<span class="material-symbols-outlined">pace</span>
 						<h6>Generate Resume Quickly</h6>
 						<p>
-							Fill a single form and click a single button to download all three resumes. No complicated UI or multiple steps.
+							One Page, One Form, One Button procedure. No overly-complicated steps to build your resume.
 						</p>
 					</li>
 					<li>

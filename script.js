@@ -125,8 +125,11 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
 	doc.text(passion, 10, 195); // Adjusted y-offset
-
+	var img = new Image();
+	img.src = "/src/images/logo-red.jpg";
+	doc.addImage(img, "png", 10, 78, 12, 15);
 	// Save the PDF
+
 	doc.save("resume.pdf");
 });
 

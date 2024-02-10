@@ -120,9 +120,6 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
 	doc.text(passion, 10, 195);
-	var img = new Image();
-	img.src = "/src/images/logo-red.png";
-	doc.addImage(img, "png", 40, 250);
 
 	doc.save("resume.pdf");
 });
@@ -257,9 +254,6 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	const passionTextLines = doc.splitTextToSize(passion, 90);
 	doc.text(passionTextLines, 110, 167.5);
-	var img = new Image();
-	img.src = "/src/images/logo-red.png";
-	doc.addImage(img, "png", 40, 250);
 	// Save the PDF
 	doc.save("resume2.pdf");
 });
@@ -380,8 +374,5 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	const passionTextLines = doc.splitTextToSize(passion, 40);
 	doc.text(passionTextLines, 75, 167.5);
-	var img = new Image();
-	img.src = "/src/images/logo-red.png";
-	doc.addImage(img, "png", 72.5, 250);
 	doc.save("resume3.pdf");
 });

@@ -5,6 +5,7 @@ html {
 	font-family: "Montserrat", Arial, sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
 }
 .header {
 	display: flex;
@@ -167,10 +168,10 @@ section#about-us {
 }
 .resume-template {
 	position: relative;
-	width: 21em;
-	height: 29.7em;
-	background-size: 21em 29.7em;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	width: 42vh;
+	height: 59.4vh;
+	background-size: 21vh 29.7vh;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 0.8vh 2.4vh;
 	margin: auto;
 	overflow: hidden;
 }

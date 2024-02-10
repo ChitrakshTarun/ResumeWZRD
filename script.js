@@ -1,3 +1,4 @@
+/* FIRST TEMPLATE */
 document.getElementById("resume-form").addEventListener("submit", function (e) {
 	e.preventDefault();
 
@@ -29,7 +30,6 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	var passion = document.getElementById("passion").value;
 	var doc = new jsPDF();
 
-	// Set font size and style
 	function centerText(text, y) {
 		var textWidth =
 			(doc.getStringUnitWidth(text) * doc.internal.getFontSize()) /
@@ -45,18 +45,16 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 		var xOffset = (doc.internal.pageSize.width - textWidth) / 2;
 		doc.text(text, xOffset, y);
 	}
-	// Personal Information
-	doc.setFontSize(24); // Increased font size for name
+	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	centerText(name, 15);
-	doc.setFontSize(18); // Increased font size for role
+	doc.setFontSize(18);
 	doc.setFont("arial", "normal");
 	centerText(role, 25);
 	doc.setTextColor(90, 90, 90);
 	doc.setFontSize(12);
 	centerTextMultiple([phone, email, linkedin, location], 35);
 
-	// Skills
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
 	centerText("SKILLS", 45);
@@ -66,12 +64,11 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.line(10, 47.5, 200, 47.5);
 	doc.text(skillset, 10, 55);
 
-	// Experience
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
 	centerText("EXPERIENCE", 65);
 	doc.line(10, 67.5, 200, 67.5);
-	doc.setFontSize(17); // Increased font size for company and title
+	doc.setFontSize(17);
 	doc.text(company, 10, 75);
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
@@ -81,54 +78,51 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.text("Employment Duration: " + joining + " to " + resigning, 10, 90);
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text(company2, 10, 100); // Adjusted y-offset
+	doc.text(company2, 10, 100);
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title2, 10, 105); // Adjusted y-offset
-	doc.text("Location: " + workLocation2, 10, 110); // Adjusted y-offset
-	doc.text("Employment Duration: " + joining2 + " to " + resigning2, 10, 115); // Adjusted y-offset
+	doc.text("Role: " + title2, 10, 105);
+	doc.text("Location: " + workLocation2, 10, 110);
+	doc.text("Employment Duration: " + joining2 + " to " + resigning2, 10, 115);
 
-	// Education
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
-	centerText("EDUCATION", 125); // Adjusted y-offset
-	doc.line(10, 127.5, 200, 127.5); // Adjusted y-offset
+	centerText("EDUCATION", 125);
+	doc.line(10, 127.5, 200, 127.5);
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text("School: " + school, 10, 135); // Adjusted y-offset
+	doc.text("School: " + school, 10, 135);
 	doc.setTextColor(90, 90, 90);
-	doc.setFontSize(12); // Increased font size for school, stream, university, degree
+	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
-	doc.text("Stream: " + stream, 10, 140); // Adjusted y-offset
-	doc.text("10th: " + percentage10 + "%", 10, 145); // Adjusted y-offset
-	doc.text("12th: " + percentage12 + "%", 10, 150); // Adjusted y-offset
+	doc.text("Stream: " + stream, 10, 140);
+	doc.text("10th: " + percentage10 + "%", 10, 145);
+	doc.text("12th: " + percentage12 + "%", 10, 150);
 	doc.setTextColor(0, 0, 0);
 	doc.setFontSize(17);
 	doc.setFont("arial", "bold");
-	doc.text("University: " + university, 10, 160); // Adjusted y-offset
-	doc.setFontSize(12); // Increased font size for school, stream, university, degree
+	doc.text("University: " + university, 10, 160);
+	doc.setFontSize(12);
 	doc.setTextColor(90, 90, 90);
 	doc.setFont("arial", "normal");
-	doc.text(degree, 10, 165); // Adjusted y-offset
-	doc.setFontSize(12); // Decreased font size for cgpa
-	doc.text("CGPA (8 Semesters): " + cgpa, 10, 170); // Adjusted y-offset
-	doc.text("Graduated on: " + dog, 10, 175); // Adjusted y-offset
+	doc.text(degree, 10, 165);
+	doc.setFontSize(12);
+	doc.text("CGPA (8 Semesters): " + cgpa, 10, 170);
+	doc.text("Graduated on: " + dog, 10, 175);
 
-	// Interests
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	centerText("INTERESTS", 185); // Adjusted y-offset
-	doc.line(10, 187.5, 200, 187.5); // Adjusted y-offset
+	centerText("INTERESTS", 185);
+	doc.line(10, 187.5, 200, 187.5);
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text(passion, 10, 195); // Adjusted y-offset
+	doc.text(passion, 10, 195);
 	var img = new Image();
 	img.src = "/src/images/logo-red.png";
 	doc.addImage(img, "png", 40, 250);
-	// Save the PDF
 
 	doc.save("resume.pdf");
 });
@@ -166,7 +160,6 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	var passion = document.getElementById("passion").value;
 	var doc = new jsPDF();
 
-	// Set font size and style
 	function centerText(text, y) {
 		var textWidth =
 			(doc.getStringUnitWidth(text) * doc.internal.getFontSize()) /
@@ -182,11 +175,11 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 		var xOffset = (doc.internal.pageSize.width - textWidth) / 2;
 		doc.text(text, xOffset, y);
 	}
-	// Personal Information
-	doc.setFontSize(28); // Increased font size for name
+
+	doc.setFontSize(28);
 	doc.setFont("arial", "bold");
 	doc.text(name, 10, 20);
-	doc.setFontSize(24); // Increased font size for role
+	doc.setFontSize(24);
 	doc.setFont("arial", "normal");
 	doc.text(role, 10, 30);
 	doc.setTextColor(90, 90, 90);
@@ -196,9 +189,6 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.text(location, 110, 25);
 	doc.text(linkedin, 110, 30);
 
-	// Left column: Skills and Education
-
-	// Education
 	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
@@ -231,10 +221,9 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	const skillsetTextLines = doc.splitTextToSize(skillset, 90); // Adjusted to match the width of the column
-	doc.text(skillsetTextLines, 10, 167.5); // Adjusted y-coordinate
-	// Right column: Work Experience and Passion
-	// Experience
+	const skillsetTextLines = doc.splitTextToSize(skillset, 90);
+	doc.text(skillsetTextLines, 10, 167.5);
+
 	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
@@ -259,16 +248,15 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.text("Location: " + workLocation2, 110, 136);
 	doc.text(joining2 + " to " + resigning2, 110, 143.5);
 
-	// Interests
-	doc.setFontSize(24); // Increased font size for name
+	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	doc.text("INTERESTS", 110, 157.5);
 	doc.line(110, 160, 200, 160);
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	const passionTextLines = doc.splitTextToSize(passion, 90); // Adjusted to match the width of the column
-	doc.text(passionTextLines, 110, 167.5); // Adjusted y-coordinate
+	const passionTextLines = doc.splitTextToSize(passion, 90);
+	doc.text(passionTextLines, 110, 167.5);
 	var img = new Image();
 	img.src = "/src/images/logo-red.png";
 	doc.addImage(img, "png", 40, 250);
@@ -307,7 +295,7 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	var dog = document.getElementById("dog").value;
 	var passion = document.getElementById("passion").value;
 	var doc = new jsPDF();
-	doc.setFillColor(173, 216, 230); // RGB for light blue
+	doc.setFillColor(173, 216, 230);
 
 	doc.rect(
 		0,
@@ -316,10 +304,10 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 		doc.internal.pageSize.getHeight(),
 		"F"
 	);
-	doc.setFontSize(20); // Increased font size for name
+	doc.setFontSize(20);
 	doc.setFont("arial", "bold");
 	doc.text(name, 5, 20);
-	doc.setFontSize(16); // Increased font size for role
+	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.text(role, 5, 30);
 	doc.setTextColor(90, 90, 90);
@@ -358,7 +346,7 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	const skillsetTextLines = doc.splitTextToSize(skillset, 40); // Adjusted to match the width of the column
+	const skillsetTextLines = doc.splitTextToSize(skillset, 40);
 	doc.text(skillsetTextLines, 5, 167.5);
 
 	// Right
@@ -390,7 +378,7 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	const passionTextLines = doc.splitTextToSize(passion, 40); // Adjusted to match the width of the column
+	const passionTextLines = doc.splitTextToSize(passion, 40);
 	doc.text(passionTextLines, 75, 167.5);
 	var img = new Image();
 	img.src = "/src/images/logo-red.png";

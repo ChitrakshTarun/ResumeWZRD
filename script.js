@@ -126,8 +126,8 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	doc.text(passion, 10, 195); // Adjusted y-offset
 	var img = new Image();
-	img.src = "/src/images/logo-red.jpg";
-	doc.addImage(img, "png", 10, 78, 12, 15);
+	img.src = "/src/images/logo-red.png";
+	doc.addImage(img, "png", 40, 250);
 	// Save the PDF
 
 	doc.save("resume.pdf");
@@ -269,7 +269,9 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	const passionTextLines = doc.splitTextToSize(passion, 90); // Adjusted to match the width of the column
 	doc.text(passionTextLines, 110, 167.5); // Adjusted y-coordinate
-
+	var img = new Image();
+	img.src = "/src/images/logo-red.png";
+	doc.addImage(img, "png", 40, 250);
 	// Save the PDF
 	doc.save("resume2.pdf");
 });
@@ -390,5 +392,8 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	const passionTextLines = doc.splitTextToSize(passion, 40); // Adjusted to match the width of the column
 	doc.text(passionTextLines, 75, 167.5);
+	var img = new Image();
+	img.src = "/src/images/logo-red.png";
+	doc.addImage(img, "png", 72.5, 250);
 	doc.save("resume3.pdf");
 });

@@ -34,7 +34,8 @@ html {
 	list-style-type: none;
 	padding: 0;
 }
-header a {
+header a,
+header p {
 	color: white;
 	text-decoration: none;
 }

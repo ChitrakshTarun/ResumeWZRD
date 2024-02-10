@@ -83,7 +83,7 @@
 					</div>
 				</fieldset>
 				<fieldset id="work-experience">
-					<legend><h2>Work Experience</h2></legend>
+					<legend><h2>Work Experience 1</h2></legend>
 					<div class="column">
 						<label for="company">Company Name</label>
 						<input
@@ -111,6 +111,38 @@
 						<input
 							type="date"
 							id="resigning"
+						/>
+					</div>
+				</fieldset>
+				<fieldset id="work-experience">
+					<legend><h2>Work Experience 2</h2></legend>
+					<div class="column">
+						<label for="company-2">Company Name</label>
+						<input
+							type="text"
+							id="company-2"
+						/>
+						<label for="work-location-2">Company Location</label>
+						<input
+							type="text"
+							id="work-location-2"
+						/>
+						<label for="title-2">Designation</label>
+						<input
+							type="text"
+							id="title-2"
+						/>
+					</div>
+					<div class="column">
+						<label for="joining-2">Joining Date</label>
+						<input
+							type="date"
+							id="joining-2"
+						/>
+						<label for="resigning">Resignation Date</label>
+						<input
+							type="date"
+							id="resigning-2"
 						/>
 					</div>
 				</fieldset>
@@ -176,14 +208,22 @@
 					</div>
 				</fieldset>
 				<button
-					id="generate-button"
+					id="generate-button generate-template-1"
 					class="generate-button"
 					type="submit"
 				>
-					Generate PDF
+					Generate Template 1
+				</button>
+				<button
+					id="generate-button generate-template-2"
+					class="generate-button"
+					type="submit"
+				>
+					Generate Template 2
 				</button>
 			</form>
 		</section>
 		<script src="script.js"></script>
+		<script src="script2.js"></script>
 	</body>
 </html>

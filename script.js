@@ -333,9 +333,9 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFontSize(12);
 	doc.setTextColor(90, 90, 90);
 	doc.setFont("arial", "normal");
-	doc.text(stream, 5, 77.5 + 7.5);
-	doc.text("10th: " + percentage10 + "%", 5, 82.5 + 7.5);
-	doc.text("12th: " + percentage12 + "%", 5, 87.5 + 7.5);
+	doc.text(stream, 5, 87.5);
+	doc.text("10th: " + percentage10 + "%", 5, 95);
+	doc.text("12th: " + percentage12 + "%", 5, 102.5);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
 	doc.setFontSize(16);
@@ -344,8 +344,8 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	doc.setFont("arial", "normal");
 	doc.text(degree, 5, 127.5);
-	doc.text(cgpa + "CGPA", 5, 135);
-	doc.text("Graduated" + dog, 5, 142.5);
+	doc.text(cgpa + " CGPA", 5, 135);
+	doc.text("Graduated: " + dog, 5, 142.5);
 	doc.setFontSize(20);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);

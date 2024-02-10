@@ -93,7 +93,7 @@ body {
 	background: #f2f3eb;
 }
 section#templates {
-	background-color: #f4f4f4;
+	background-color: #f2f3eb;
 	padding: 3rem 0;
 }
 section#features,
@@ -166,24 +166,25 @@ section#about-us {
 	position: relative;
 	width: 21em;
 	height: 29.7em;
-
-	background: url(src/images/resume-template.png) no-repeat;
 	background-size: 21em 29.7em;
-	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	margin: auto;
 	overflow: hidden;
 }
 
-.resume-template {
-	position: relative;
-	width: 21em;
-	height: 29.7em;
+#template-1 {
+	background-image: url("src/images/resume-template-1.png");
+	background-size: cover;
+}
 
-	background: url(src/images/resume-template.png) no-repeat;
-	background-size: 21em 29.7em;
-	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-	margin: auto;
-	overflow: hidden;
+#template-2 {
+	background-image: url("src/images/resume-template-2.png");
+	background-size: cover;
+}
+
+#template-3 {
+	background-image: url("src/images/resume-template-3.png");
+	background-size: cover;
 }
 .resume-template * {
 	position: relative;
@@ -207,7 +208,6 @@ section#about-us {
 	bottom: 0;
 	position: absolute;
 	transition: 0.7s background;
-	background: rgba(74, 100, 114, 0.3);
 	z-index: 1;
 }
 

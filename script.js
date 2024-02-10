@@ -245,16 +245,16 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setTextColor(90, 90, 90);
 	doc.text("Role: " + title, 110, 62.5);
 	doc.text("Location: " + workLocation, 110, 70);
-	doc.text("Employment Duration: " + joining + " to " + resigning, 110, 77.5);
+	doc.text(joining + " to " + resigning, 110, 77.5);
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	doc.text(company, 110, 121);
+	doc.text(company2, 110, 121);
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title, 110, 128.5);
-	doc.text("Location: " + workLocation, 110, 136);
-	doc.text("Employment Duration: " + joining + " to " + resigning, 110, 143.5);
+	doc.text("Role: " + title2, 110, 128.5);
+	doc.text("Location: " + workLocation2, 110, 136);
+	doc.text(joining2 + " to " + resigning2, 110, 143.5);
 
 	// Interests
 	doc.setFontSize(24); // Increased font size for name

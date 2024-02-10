@@ -46,15 +46,25 @@
 						generate three professionally crafted resumes tailored to your
 						needs!
 					</p>
-					<a href="form.html">
-						<button
-							id="start-button"
-							class="generate-button"
-							role="button"
-						>
-							Build Your Resume!
-						</button></a
+					<button
+						id="start-button"
+						class="generate-button"
+						role="button"
+						onclick="redirectToSite()"
 					>
+						Build Your Resume!
+					</button>
+					<script>
+						function redirectToSite() {
+							// Redirect to the loading page
+							window.location.href = "form.html";
+
+							// After 1.5 seconds, redirect to the intended site
+							setTimeout(function () {
+								window.location.href = "loading.html";
+							}, 1500);
+						}
+					</script>
 				</div>
 			</div>
 		</section>

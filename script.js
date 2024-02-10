@@ -130,6 +130,8 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.save("resume.pdf");
 });
 
+/* SECOND TEMPLATE */
+
 document.getElementById("resume-form").addEventListener("submit", function (e) {
 	e.preventDefault();
 
@@ -178,85 +180,97 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 		doc.text(text, xOffset, y);
 	}
 	// Personal Information
-	doc.setFontSize(24); // Increased font size for name
+	doc.setFontSize(28); // Increased font size for name
 	doc.setFont("arial", "bold");
-	centerText(name, 15);
-	doc.setFontSize(18); // Increased font size for role
+	doc.text(name, 10, 20);
+	doc.setFontSize(24); // Increased font size for role
 	doc.setFont("arial", "normal");
-	centerText(role, 25);
+	doc.text(role, 10, 30);
 	doc.setTextColor(90, 90, 90);
 	doc.setFontSize(12);
-	centerTextMultiple([phone, email, linkedin, location], 35);
+	doc.text(phone, 110, 15);
+	doc.text(email, 110, 20);
+	doc.text(location, 110, 25);
+	doc.text(linkedin, 110, 30);
 
-	// Skills
+	// Define column widths and positions
+	let leftColumnY = 50; // Initial y-coordinate for left column
+	let rightColumnY = 50; // Initial y-coordinate for right column
+
+	// Left column: Skills and Education
+
+	// Education
+	leftColumnY += 45; // Adjust y-coordinate for education
+	doc.setFontSize(24);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(0, 0, 0);
+	doc.text("EDUCATION", 10, 45);
+	doc.line(10, 47.5, 100, 47.5);
+	doc.setFontSize(18);
+	doc.text("School: " + school, 10, 55);
+	doc.setFont("arial", "bold");
+	doc.setTextColor(90, 90, 90);
+	doc.setFontSize(16);
+	doc.setFont("arial", "normal");
+	doc.text("Stream: " + stream, 10, 62.5);
+	doc.text("10th: " + percentage10 + "%", 10, 70);
+	doc.text("12th: " + percentage12 + "%", 10, 77.5);
 	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	centerText("SKILLS", 45);
+	doc.setTextColor(0, 0, 0);
+	doc.text("University: " + university, 10, 121);
+	doc.setTextColor(90, 90, 90);
+	doc.setFont("arial", "normal");
+	doc.text(degree, 10, 128.5);
+	doc.setFontSize(16);
+	doc.text("CGPA (80 Semesters): " + cgpa, 10, 136);
+	doc.text("Graduated on: " + dog, 10, 143.5);
+
+	doc.setFontSize(24);
+	doc.setFont("arial", "bold");
+	doc.text("SKILLS", 10, 157.5);
+	doc.line(10, 160, 100, 160);
 	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.line(10, 47.5, 200, 47.5);
-	doc.text(skillset, 10, 52.5);
-
+	const skillsetTextLines = doc.splitTextToSize(skillset, 90); // Adjusted to match the width of the column
+	doc.text(skillsetTextLines, 10, 167.5); // Adjusted y-coordinate
+	// Right column: Work Experience and Passion
 	// Experience
-	doc.setFontSize(18);
-	doc.setFont("arial", "bold");
-	centerText("EXPERIENCE", 62.5);
-	doc.line(10, 65, 200, 65);
-	doc.setFontSize(17); // Increased font size for company and title
-	doc.text(company, 10, 70);
-	doc.setFontSize(12);
-	doc.setFont("arial", "normal");
-	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title, 10, 75);
-	doc.text("Location: " + workLocation, 10, 80);
-	doc.text("Employment Duration: " + joining + " to " + resigning, 10, 85);
-	doc.setFontSize(17);
-	doc.setFont("arial", "bold");
-	doc.text(company2, 10, 95); // Adjusted y-offset
-	doc.setFontSize(12);
-	doc.setFont("arial", "normal");
-	doc.setTextColor(90, 90, 90);
-	doc.text("Role: " + title2, 10, 100); // Adjusted y-offset
-	doc.text("Location: " + workLocation2, 10, 105); // Adjusted y-offset
-	doc.text("Employment Duration: " + joining2 + " to " + resigning2, 10, 110); // Adjusted y-offset
-
-	// Education
-	doc.setFontSize(18);
+	doc.setFontSize(24);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
-	centerText("EDUCATION", 120); // Adjusted y-offset
-	doc.line(10, 122.5, 200, 122.5); // Adjusted y-offset
-	doc.setFontSize(17);
+	doc.text("EXPERIENCE", 110, 45);
+	doc.line(110, 47.5, 200, 47.5);
+	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	doc.text("School: " + school, 10, 127.5); // Adjusted y-offset
-	doc.setTextColor(90, 90, 90);
-	doc.setFontSize(12); // Increased font size for school, stream, university, degree
+	doc.text(company, 110, 55);
+	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
-	doc.text("Stream: " + stream, 10, 132.5); // Adjusted y-offset
-	doc.text("10th: " + percentage10 + "%", 10, 137.5); // Adjusted y-offset
-	doc.text("12th: " + percentage12 + "%", 10, 142.5); // Adjusted y-offset
-	doc.setTextColor(0, 0, 0);
-	doc.setFontSize(17);
+	doc.setTextColor(90, 90, 90);
+	doc.text("Role: " + title, 110, 62.5);
+	doc.text("Location: " + workLocation, 110, 70);
+	doc.text("Employment Duration: " + joining + " to " + resigning, 110, 77.5);
+	doc.setFontSize(18);
 	doc.setFont("arial", "bold");
-	doc.text("University: " + university, 10, 152.5); // Adjusted y-offset
-	doc.setFontSize(12); // Increased font size for school, stream, university, degree
-	doc.setTextColor(90, 90, 90);
+	doc.text(company, 110, 121);
+	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
-	doc.text(degree, 10, 157.5); // Adjusted y-offset
-	doc.setFontSize(12); // Decreased font size for cgpa
-	doc.text("CGPA (80 Semesters): " + cgpa, 10, 162.5); // Adjusted y-offset
-	doc.text("Graduated on: " + dog, 10, 167.5); // Adjusted y-offset
+	doc.setTextColor(90, 90, 90);
+	doc.text("Role: " + title, 110, 128.5);
+	doc.text("Location: " + workLocation, 110, 136);
+	doc.text("Employment Duration: " + joining + " to " + resigning, 110, 143.5);
 
 	// Interests
-	doc.setFontSize(18);
+	doc.setFontSize(24); // Increased font size for name
 	doc.setFont("arial", "bold");
-	centerText("INTERESTS", 177.5); // Adjusted y-offset
-	doc.line(10, 180, 200, 180); // Adjusted y-offset
-	doc.setFontSize(12);
+	doc.text("INTERESTS", 110, 157.5);
+	doc.line(110, 160, 200, 160);
+	doc.setFontSize(16);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text(passion, 10, 185); // Adjusted y-offset
+	const passionTextLines = doc.splitTextToSize(passion, 90); // Adjusted to match the width of the column
+	doc.text(passionTextLines, 110, 167.5); // Adjusted y-coordinate
 
 	// Save the PDF
 	doc.save("resume2.pdf");

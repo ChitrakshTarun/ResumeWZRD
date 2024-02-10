@@ -35,173 +35,155 @@
 		</section>
 		<section>
 			<form>
-				<fieldset>
-					<legend><h2>Personal information</h2></legend>
-					<label for="name">Your Name</label>
-					<input
-						type="text"
-						id="name"
-					/>
-					<br />
-					<br />
-					<label for="role">Role you are applying for </label>
-					<input
-						type="text"
-						id="role"
-					/>
-					<br />
-					<br />
-					<label for="role">The role you are applying for</label>
-					<input
-						type="text"
-						id="role"
-					/>
-					<br />
-					<br />
-					<label for="phone">Your phone number</label>
-					<input
-						type="number"
-						id="phone"
-					/>
-					<br />
-					<br />
-					<label for="email">Your phone number</label>
-					<input
-						type="text"
-						id="email"
-					/>
-					<br />
-					<br />
-					<label for="phone">Your phone number</label>
-					<input
-						type="text"
-						id="phone"
-					/>
-					<br />
-					<br />
-					<label for="linkedin">Enter your linked in profile</label>
-					<input
-						type="text"
-						id="linkedin"
-					/>
+				<fieldset id="personal-information">
+					<legend><h2>Personal Information</h2></legend>
+					<div class="column">
+						<label for="name">Your Name</label>
+						<input
+							type="text"
+							id="name"
+						/>
+						<label for="role">Role you're applying for</label>
+						<input
+							type="text"
+							id="role"
+						/>
+						<label for="phone">Phone Number</label>
+						<input
+							type="text"
+							id="phone"
+						/>
+					</div>
+					<div class="column">
+						<label for="email">Email Address</label>
+						<input
+							type="email"
+							id="email"
+						/>
+						<label for="linkedin">LinkedIn</label>
+						<input
+							type="text"
+							id="linkedin"
+						/>
+						<label for="phone">Location</label>
+						<input
+							type="text"
+							id="location"
+						/>
+					</div>
 				</fieldset>
-				<fieldset>
+				<fieldset id="skills">
 					<legend><h2>Skills</h2></legend>
-					<label for="skills">skills:</label>
-					<textarea
-						name="skills"
-						cols="100"
-						rows="10"
-					></textarea>
+					<div class="column">
+						<label for="skills">E.g: HTML, CSS, JS, React...</label>
+						<input
+							type="text"
+							id="skills"
+						/>
+					</div>
 				</fieldset>
-				<fieldset>
-					<legend><h2>Experience</h2></legend>
-					<label for="company">Company you have worked for:</label>
-					<input
-						type="text"
-						id="company"
-					/>
-					<br />
-					<br />
-					<label for="location">Location of company</label>
-					<input
-						type="text"
-						id="location"
-					/>
-					<br />
-					<br />
-					<label for="joining">Date of joining</label>
-					<input
-						type="date"
-						id="joining"
-					/>
-					<br />
-					<br />
-					<label for="leaving">Date of resigning</label>
-					<input
-						type="date"
-						id="leaving"
-					/>
-					<br />
-					<br />
-					<label for="title">Enter title you achieved in the company </label>
-					<input
-						type="text"
-						id="title"
-					/>
+				<fieldset id="work-experience">
+					<legend><h2>Work Experience</h2></legend>
+					<div class="column">
+						<label for="company">Company Name</label>
+						<input
+							type="text"
+							id="company"
+						/>
+						<label for="location">Company Location</label>
+						<input
+							type="text"
+							id="location"
+						/>
+						<label for="title">Designation</label>
+						<input
+							type="text"
+							id="title"
+						/>
+					</div>
+					<div class="column">
+						<label for="joining">Joining Date</label>
+						<input
+							type="date"
+							id="joining"
+						/>
+						<label for="leaving">Resignation Date</label>
+						<input
+							type="date"
+							id="resigning"
+						/>
+					</div>
 				</fieldset>
-				<fieldset>
+				<fieldset id="education">
 					<legend><h2>Education</h2></legend>
-					<label for="school">Name of school</label>
-					<input
-						type="text"
-						name=""
-						id="school"
-					/>
-					<br />
-					<br />
-					<label for="percentage12">Marks in class 12th</label>
-					<input
-						type="number"
-						id="percentage"
-					/>
-					<br />
-					<br />
-					<label for="percentage10">Marks in class 10th</label>
-					<input
-						type="number"
-						name=""
-						id="percentage10"
-					/>
-					<br />
-					<br />
-					<label for="uni">Name of University</label>
-					<input
-						type="text"
-						id="uni"
-					/>
-					<br />
-					<br />
-					<label for="cgpa">CGPA scored</label>
-					<input
-						type="number"
-						name=""
-						id="cgpa"
-					/>
-					<br />
-					<br />
-					<label for="doa">Date of admission</label>
-					<input
-						type="date"
-						id="doa"
-					/>
-					<br /><br />
-					<label for="dog">Date of graduation</label>
-					<input
-						type="date"
-						name=""
-						id="dog"
-					/>
-					<br /><br />
-					<label for="degree">Name of degree earned</label>
-					<input
-						type="text"
-						id="degree"
-					/>
+					<div class="column">
+						<label for="school">School Name</label>
+						<input
+							type="text"
+							name=""
+							id="school"
+						/>
+						<label for="school">Stream (Science, Commerce, etc...)</label>
+						<input
+							type="text"
+							name=""
+							id="stream"
+						/>
+						<label for="percentage12">10th Marks</label>
+						<input
+							type="text"
+							id="percentage"
+						/>
+						<label for="percentage12">12th Marks</label>
+						<input
+							type="text"
+							id="percentage"
+						/>
+					</div>
+					<div class="column">
+						<label for="uni">University Name</label>
+						<input
+							type="text"
+							id="uni"
+						/>
+						<label for="degree">Degree (B.Tech CSE, B.Com Hons, etc...)</label>
+						<input
+							type="text"
+							id="degree"
+						/>
+						<label for="cgpa">CGPA</label>
+						<input
+							type="text"
+							name=""
+							id="cgpa"
+						/>
+						<label for="dog">Graduation Date</label>
+						<input
+							type="date"
+							name=""
+							id="dog"
+						/>
+					</div>
 				</fieldset>
-				<fieldset>
+				<fieldset id="interests">
 					<legend><h2>Passion and Interests</h2></legend>
-					<label for="Passion">Interests and Passion</label>
-					<textarea
-						name="Passion"
-						id=""
-						cols="100"
-						rows="10"
-					></textarea>
+					<div class="column">
+						<label for="passion">E.g: Music, Stitching...</label>
+						<input
+							type="text"
+							id="passion"
+						/>
+					</div>
 				</fieldset>
-				<br />
-				<br />
 			</form>
+			<div class="home-content">
+				<button
+					class="generate-button"
+					role="button"
+				>
+					Build Your Resume!
+				</button>
+			</div>
 		</section>
 		<script src="script.js"></script>
 	</body>

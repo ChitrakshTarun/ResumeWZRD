@@ -1,15 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+body {
+	align-items: center;
+	justify-content: center;
+}
 button {
 	overflow: visible;
 }
 
-button,
 select {
 	text-transform: none;
 }
 
-button,
 input,
 select,
 textarea {
@@ -73,6 +74,7 @@ h1 {
 
 input[type="text"],
 [type="email"],
+[type="date"],
 select,
 textarea {
 	background: none;
@@ -224,4 +226,29 @@ textarea {
 	textarea {
 		font-size: 0.875em;
 	}
+}
+#personal-information,
+#skills,
+#education,
+#work-experience {
+	display: flex;
+	justify-content: space-between;
+}
+#skills {
+	padding-left: 0 20px;
+}
+
+.column {
+	flex: 1;
+	padding: 0 20px;
+}
+
+fieldset {
+	margin-bottom: 30px;
+}
+fieldset:last-child {
+	margin-bottom: -60px !important;
+}
+section {
+	margin-bottom: 20px;
 }

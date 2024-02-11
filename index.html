@@ -32,8 +32,16 @@
 				<div class="header">
 					<a href="/">
 						<p class="navbar-item">
-							<img src ="src/images/logo-white.png" height="50px"
-							onclick="reloadPage()"">
+							<img
+								src="src/images/logo-white.png"
+								height="50px"
+								onclick="refreshPage()"
+							/>
+							<script>
+								function refreshPage() {
+									window.location.reload();
+								}
+							</script>
 						</p>
 					</a>
 					<nav class="header-nav">
@@ -175,10 +183,10 @@
 					<li>
 						<h6>About The Team</h6>
 						<p>
-							Chitraksh Tarun - Website Template, JavaScript Functionality<br />
-							Dhruv Kaushal - Form Design and Functionality<br />
-							Sneha Vishwakarma - Design and Logo Elements<br />
-							Dipesh Mittal - Semantics and Technical Design
+							Chitraksh Tarun - Website, JavaScript Functionality<br />
+							Dhruv Kaushal - Form Design, Functionality<br />
+							Sneha Vishwakarma - Design, Logo Elements<br />
+							Dipesh Mittal - Semantics, Technical Design
 						</p>
 					</li>
 				</ul>

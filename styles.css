@@ -177,17 +177,17 @@ section#about-us {
 }
 
 #template-1 {
-	background-image: url("src/images/resume-template-1.png");
+	background-image: url("src/images/resume-simple-template.png");
 	background-size: cover;
 }
 
 #template-2 {
-	background-image: url("src/images/resume-template-2.png");
+	background-image: url("src/images/resume-colour-template.png");
 	background-size: cover;
 }
 
 #template-3 {
-	background-image: url("src/images/resume-template-3.png");
+	background-image: url("src/images/resume-column-template.png");
 	background-size: cover;
 }
 .resume-template * {

@@ -47,16 +47,19 @@
 						<input
 							type="text"
 							id="name"
+							maxlength="30"
 						/>
 						<label for="role">Role you're applying for</label>
 						<input
 							type="text"
 							id="role"
+							maxlength="30"
 						/>
 						<label for="phone">Phone Number</label>
 						<input
 							type="text"
 							id="phone"
+							maxlength="10"
 						/>
 					</div>
 					<div class="column">
@@ -64,16 +67,19 @@
 						<input
 							type="email"
 							id="email"
+							maxlength="30"
 						/>
 						<label for="linkedin">LinkedIn</label>
 						<input
 							type="text"
 							id="linkedin"
+							maxlength="30"
 						/>
-						<label for="phone">Location</label>
+						<label for="location">Location</label>
 						<input
 							type="text"
 							id="location"
+							maxlength="15"
 						/>
 					</div>
 				</fieldset>
@@ -94,16 +100,19 @@
 						<input
 							type="text"
 							id="company"
+							maxlength="30"
 						/>
 						<label for="work-location">Company Location</label>
 						<input
 							type="text"
 							id="work-location"
+							maxlength="25"
 						/>
 						<label for="title">Designation</label>
 						<input
 							type="text"
 							id="title"
+							maxlength="30"
 						/>
 					</div>
 					<div class="column">
@@ -126,16 +135,19 @@
 						<input
 							type="text"
 							id="company-2"
+							maxlength="30"
 						/>
 						<label for="work-location-2">Company Location</label>
 						<input
 							type="text"
 							id="work-location-2"
+							maxlength="25"
 						/>
 						<label for="title-2">Designation</label>
 						<input
 							type="text"
 							id="title-2"
+							maxlength="30"
 						/>
 					</div>
 					<div class="column">
@@ -154,11 +166,17 @@
 				<fieldset id="education">
 					<legend><h2>Education</h2></legend>
 					<div class="column">
-						<label for="school">School Name</label>
+						<label for="school"
+							>School Name
+							<span id="gray-label"
+								>(Opt for short form to prevent text overlap)</span
+							></label
+						>
 						<input
 							type="text"
 							name=""
 							id="school"
+							maxlength="20"
 						/>
 						<label for="stream">Stream (Science, Commerce, etc...)</label>
 						<input
@@ -178,10 +196,16 @@
 						/>
 					</div>
 					<div class="column">
-						<label for="university">University Name</label>
+						<label for="university"
+							>University Name
+							<span id="gray-label"
+								>(Opt for short form to prevent text overlap)</span
+							></label
+						>
 						<input
 							type="text"
 							id="university"
+							maxlength="20"
 						/>
 						<label for="degree">Degree (B.Tech CSE, B.Com Hons, etc...)</label>
 						<input

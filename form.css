@@ -254,3 +254,6 @@ section {
 	display: flex;
 	flex-direction: column;
 }
+#gray-label {
+	color: #999;
+}

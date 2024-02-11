@@ -208,7 +208,7 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.setFont("arial", "normal");
 	doc.text(degree, 10, 128.5);
 	doc.setFontSize(16);
-	doc.text("CGPA (80 Semesters): " + cgpa, 10, 136);
+	doc.text("CGPA (8 Semesters): " + cgpa, 10, 136);
 	doc.text("Graduated on: " + dog, 10, 143.5);
 
 	doc.setFontSize(24);
@@ -358,13 +358,13 @@ document.getElementById("resume-form").addEventListener("submit", function (e) {
 	doc.text("Duration: " + joining + " to " + resigning, 75, 102.5);
 	doc.setFontSize(16);
 	doc.setFont("arial", "bold");
-	doc.text(company, 75, 120);
+	doc.text(company2, 75, 120);
 	doc.setFontSize(12);
 	doc.setFont("arial", "normal");
 	doc.setTextColor(90, 90, 90);
-	doc.text(title, 75, 127.5);
-	doc.text(workLocation, 75, 135);
-	doc.text("Duration: " + joining + " to " + resigning, 75, 142.5);
+	doc.text(title2, 75, 127.5);
+	doc.text(workLocation2, 75, 135);
+	doc.text("Duration: " + joining2 + " to " + resigning2, 75, 142.5);
 	doc.setFontSize(20);
 	doc.setFont("arial", "bold");
 	doc.setTextColor(0, 0, 0);
